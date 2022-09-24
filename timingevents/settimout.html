@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter app</title>
+</head>
+<body>
+           <button  onclick="incremnetBtn()">+</button>
+           <input type="text" value="0" disabled id="inputfld"  />
+           <button onclick="decBtn()">-</button>
+</body>
+<script>
+//    ()=>{
+
+//    }
+//    1)setTimeout
+//    2)it accepts 2 paramters
+    //  first paramter is callback function
+    //   2nd paramter me time batao ge(but in milliseconds) 1000ms = 1sec
+
+//    setTimeout(()=>{
+        //  alert('yeah is working')
+//    },3000)
+      
+
+  const incremnetBtn=()=>{
+    setTimeout(()=>{
+        if( document.getElementById('inputfld').value<5){
+        document.getElementById('inputfld').value++;
+
+    }else{
+        alert('you cant go above 5')
+    }
+    },1000)
+   
+  }
+
+ const decBtn=()=>{
+    if(document.getElementById('inputfld').value>=1){
+        document.getElementById('inputfld').value--;
+
+    }else{
+        alert('you cant go below 0')
+
+    }
+
+ }
+
+
+
+
+</script>
+</html>
